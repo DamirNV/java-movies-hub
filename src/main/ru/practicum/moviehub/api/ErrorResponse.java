@@ -6,7 +6,8 @@ public class ErrorResponse {
     private String error;
     private List<String> details;
 
-    public ErrorResponse() {}
+    public ErrorResponse() {
+    }
 
     public ErrorResponse(String error) {
         this.error = error;
