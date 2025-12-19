@@ -107,7 +107,8 @@ class MoviesApiTest {
 
         assertEquals(200, resp.statusCode());
         List<Movie> movies = gson.fromJson(resp.body(),
-                new com.google.gson.reflect.TypeToken<List<Movie>>(){}.getType());
+                new com.google.gson.reflect.TypeToken<List<Movie>>() {
+                }.getType());
         assertFalse(movies.isEmpty());
         assertEquals("The Matrix", movies.get(0).getTitle());
     }
@@ -263,7 +264,8 @@ class MoviesApiTest {
 
         assertEquals(200, resp.statusCode());
         List<Movie> movies = gson.fromJson(resp.body(),
-                new com.google.gson.reflect.TypeToken<List<Movie>>(){}.getType());
+                new com.google.gson.reflect.TypeToken<List<Movie>>() {
+                }.getType());
         assertEquals(2, movies.size());
         assertTrue(movies.stream().allMatch(m -> m.getYear() == 2020));
     }
@@ -424,7 +426,8 @@ class MoviesApiTest {
 
         assertEquals(200, resp.statusCode());
         List<Movie> movies = gson.fromJson(resp.body(),
-                new com.google.gson.reflect.TypeToken<List<Movie>>(){}.getType());
+                new com.google.gson.reflect.TypeToken<List<Movie>>() {
+                }.getType());
         assertTrue(movies.isEmpty());
     }
 
@@ -444,7 +447,8 @@ class MoviesApiTest {
 
         assertEquals(200, resp.statusCode());
         List<Movie> movies = gson.fromJson(resp.body(),
-                new com.google.gson.reflect.TypeToken<List<Movie>>(){}.getType());
+                new com.google.gson.reflect.TypeToken<List<Movie>>() {
+                }.getType());
         assertEquals(3, movies.size());
     }
 
